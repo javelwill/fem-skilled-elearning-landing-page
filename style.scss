@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+$light-blue: #666ca3;
+$dark-blue: #13183f;
+$light-gray: #83869a;
+$dark-pink: #f74780;
+$light-pink: #ffa7c3;
+$white: #ffffff;
+$orange-pink: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+$blue-pink: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+$lighy-orange-pink: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  ),
+  linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+$light-blue-pink: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  ),
+  linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+
+@mixin heading-xl {
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 71px;
+}
+
+@mixin heading-l {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 50px;
+}
+@mixin heading-m {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+}
+@mixin heading-s {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+}
+@mixin body-m {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+@mixin body-s {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans';
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  padding: 0 1em;
+}
+
+header {
+  .container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: 89px;
+      cursor: pointer;
+    }
+
+    .cta {
+      background: $dark-blue;
+      color: $white;
+      padding: 12px 24px;
+      border-radius: 28px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
+
+section.hero {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    .copy {
+      .title {
+        @include heading-l;
+      }
+
+      .text {
+        @include body-s();
+        color: $light-gray;
+        font-weight: normal;
+      }
+
+      .cta {
+        background: $orange-pink;
+        color: $white;
+        padding: 15px 37px;
+        border-radius: 31px;
+        display: inline-block;
+        font-weight: bold;
+        font-style: 16px;
+      }
+    }
+
+    .hero-img {
+      width: 330px;
+    }
+  }
+}
+
+.courses {
+  .container {
+    ul {
+      li {
+        &.heading {
+          background: $orange-pink;
+          color: $white;
+          padding: 14px 24px;
+          border-radius: 10px;
+        }
+        &.course {
+          margin-top: 3em;
+          padding: 0 1.5em 1.5em 1.5em;
+          border-radius: 10px;
+          img {
+            margin-top: -1.5em;
+          }
+          .text {
+            color: $light-gray;
+            @include body-s();
+            font-weight: normal;
+          }
+          .cta {
+            color: $dark-pink;
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $dark-blue;
+
+  .container {
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      cursor: pointer;
+      width: 89px;
+    }
+
+    .cta {
+      background: $blue-pink;
+      color: $white;
+      padding: 12px 24px;
+      border-radius: 28px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  section.hero {
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      gap: 1em;
+
+      .copy {
+        text-align: left;
+        margin-right: 1em;
+      }
+
+      picture {
+        .hero-img {
+          margin-top: -60px;
+          margin-right: -300px;
+          width: 600px;
+        }
+      }
+    }
+  }
+
+  .courses {
+    .container {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+
+        li {
+          &.heading {
+            background: $orange-pink;
+            color: $white;
+            padding: 14px 24px;
+            border-radius: 10px;
+            margin-top: 3em;
+          }
+          &.course {
+            margin-top: 3em;
+            padding: 0 1.5em 1.5em 1.5em;
+            border-radius: 10px;
+            img {
+              margin-top: -1.5em;
+            }
+            .text {
+              color: $light-gray;
+              @include body-s();
+              font-weight: normal;
+            }
+            .cta {
+              color: $dark-pink;
+              font-weight: bold;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  section.hero {
+    .container {
+      .copy {
+        text-align: left;
+        margin-right: 10em;
+      }
+    }
+  }
+
+  .courses {
+    .container {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+
+        li {
+          &.heading {
+            background: $orange-pink;
+            color: $white;
+            padding: 14px 24px;
+            border-radius: 10px;
+            margin-top: 3em;
+          }
+          &.course {
+            margin-top: 3em;
+            padding: 0 1.5em 1.5em 1.5em;
+            border-radius: 10px;
+            img {
+              margin-top: -1.5em;
+            }
+            .text {
+              color: $light-gray;
+              @include body-s();
+              font-weight: normal;
+            }
+            .cta {
+              color: $dark-pink;
+              font-weight: bold;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
