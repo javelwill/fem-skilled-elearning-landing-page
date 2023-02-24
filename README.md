@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/javelwilson/skilled-elearning-landing-page](https://github.com/javelwilson/skilled-elearning-landing-page)
-- Live Site URL: [https://javelwilson.github.io/skilled-elearning-landing-page/](https://javelwilson.github.io/skilled-elearning-landing-page/)
+- Solution URL: [https://github.com/javelwilson/fem-skilled-elearning-landing-page](https://github.com/javelwilson/fem-skilled-elearning-landing-page)
+- Live Site URL: [https://javelwilson.github.io/fem-skilled-elearning-landing-page/](https://javelwilson.github.io/fem-skilled-elearning-landing-page/)
 
 ## My process
 
